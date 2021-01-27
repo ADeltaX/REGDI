@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace REGDI.net5
@@ -14,10 +11,14 @@ namespace REGDI.net5
         [STAThread]
         static void Main()
         {
-            //Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            var form = new Form1();
+            form.Width = 609;
+            form.Height = 639;
+
+            Application.Run(form);
         }
     }
 }
